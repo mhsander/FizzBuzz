@@ -1,5 +1,7 @@
+require 'fizzbuzz'
+
 class NumbersController < ApplicationController
-  require 'fizzbuzz'
+  include NumbersHelper
 
   def new
 
@@ -16,12 +18,12 @@ class NumbersController < ApplicationController
 
   def show
     @number = Number.find(params[:id])
+
   end
 
   def index
     @numbers = Number.all
   end
-end
 
   def destroy
     @number = Number.find(params[:id])
@@ -29,6 +31,9 @@ end
     redirect_to 'number#index'
   end
 
-def number_params
-  params.permit(:number)
+  private
+
+  def number_params
+    params.permit(:number)
+  end
 end

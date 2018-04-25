@@ -4,21 +4,9 @@
     <div class="show">
       <h2> YOU GOT </h2>
 
-      <% result = fizzbuzz(@number.number) %>
-      <% # option to destroy number, but won't be able to reload the page: @number.destroy %>
-
-      <em><h2><%= result %></h2></em>
-
-      <% if result == 'Fizz' %>
-        <iframe src="https://giphy.com/embed/8pMS5BXOUVZyo" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><br>
-      <% elsif result == 'Buzz' %>
-        <iframe src="https://giphy.com/embed/OzFPEMJFjm4lW" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><br>
-      <% elsif result == 'Fizz Buzz' %>
-        <iframe src="https://giphy.com/embed/12R2bKfxceemNq" width="458" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><br>
-      <% else %>
-        <h3>Not a FIZZ, not a BUZZ. Try again!</h3>
-        <iframe src="https://giphy.com/embed/26xBI73gWquCBBCDe" width="480" height="295" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><br>
-      <% end %>
+      <% q = fizzbuzz(@number.number) # calling fizzbuzz to display result before giphy %>
+      <h1><%= q %></h1>
+      <%= get_fizz(q) %>
 
       <%= link_to 'TRY AGAIN', controller: 'numbers' %><br>
       <%= link_to 'Home', controller: 'welcome' %>
