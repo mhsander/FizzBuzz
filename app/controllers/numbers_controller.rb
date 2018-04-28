@@ -18,7 +18,6 @@ class NumbersController < ApplicationController
 
   def show
     @number = Number.find(params[:id])
-
   end
 
   def index
