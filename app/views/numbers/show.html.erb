@@ -1,10 +1,10 @@
 
     <div class="show">
       <h2> YOU GOT </h2>
-      <% q = fizzbuzz(@number.number) # calling fizzbuzz to display result before giphy %>
+      <% q = fizzbuzz(@number.number) # calling fizzbuzz get answer and display result%>
       <h1><%= q %></h1>
 
-      <iframe src="<%= get_fizz(q)%>" <iframe src="https://giphy.com/embed/5xtDarEbygs3Pu7p3jO" width="480" height="271" frameBorder="0" class="giphy-embed" allowFullScreen> </iframe><br><br>
+      <iframe src="<%= get_fizz(q)%>" width="500" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><br><br>
 
       <%= link_to 'TRY AGAIN', controller: 'numbers' %><br>
       <%= link_to 'Home', controller: 'welcome' %>

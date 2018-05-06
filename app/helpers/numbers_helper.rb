@@ -24,7 +24,7 @@ module NumbersHelper
     begin
       #Search Endpoint
       giphy = api_instance.gifs_search_get(api_key, q, opts)
-      giphy = giphy.data[rand(100)].images.original.url # returns random giphy from library
+      giphy = giphy.data[rand(30)].images.original.url # returns random giphy from APIT library
 
     rescue GiphyClient::ApiError => e
       puts "Exception when calling DefaultApi->gifs_search_get: #{e}"
